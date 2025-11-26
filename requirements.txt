@@ -1,12 +1,11 @@
 fastapi==0.103.0
 uvicorn[standard]==0.23.2
 pydantic==2.6.2
-torch==2.1.0
+torch 
 transformers==4.38.0
-Pillow==10.1.0
-numpy==1.26.0
-regex==2025.11.21
+Pillow
+numpy<2 # Downgrade to fix PyTorch / Transformers compatibility
+regex
 tokenizers==0.15.1
 typing-extensions==4.7.1
-
 
