@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 annotated-types==0.7.0
 anyio==4.11.0
 certifi==2025.8.3
@@ -50,3 +51,17 @@ typing-inspection==0.4.1
 typing_extensions==4.15.0
 urllib3==2.5.0
 uvicorn==0.37.0
+=======
+fastapi==0.103.0
+uvicorn[standard]==0.23.2
+pydantic==2.6.2
+torch==2.1.0
+transformers==4.38.0
+Pillow==10.1.0
+numpy==1.26.0
+regex==2025.11.21
+tokenizers==0.15.1
+typing-extensions==4.7.1
+
+
+>>>>>>> d5bed4f88857d9f71bda90892eafa70c6cc7ffc7
