@@ -9,29 +9,5 @@
 ## 8. Your browser now produces caption for images captured using webcam.
 
 ##ARCHITECTURE
-┌─────────────────────────────────────────────────────────────┐
-│                    Client (Frontend/Browser)                │
-└───────────────────────┬─────────────────────────────────────┘
-                        │
-                        │ REST API (localhost:8080)
-                        ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    Go Service (Gateway)                     │
-│  • CORS handling                                            │
-│  • Rate limiting                                            │
-│  • Request validation                                       │
-│  • Load balancing                                           │
-│  • Circuit breaking                                         | 
-│  • Acts as reverse proxy to python service   
-|  • json validation
-└───────────────────────┬─────────────────────────────────────┘
-                        │
-                        │ Internal REST (localhost:8000)
-                        ▼
-┌─────────────────────────────────────────────────────────────┐
-│              Python/FastAPI (Model Service)                 │
-│  • Model loading/inference                                  │
-│  • GPU management                                           │
-│  • Model-specific validation                                │
-│  • Automatic API docs                                       │
-└─────────────────────────────────────────────────────────────┘
+
+<img width="745" height="762" alt="Screenshot From 2025-12-12 21-29-14" src="https://github.com/user-attachments/assets/2fafd9ab-8a60-4b6f-b6ae-5d3c920f421d" />
