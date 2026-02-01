@@ -1,13 +1,98 @@
-# IMAGE CAPTIONING USING VIT-ENCODER AND GPT2 DECODER
-## 1. Clone this repository.
-## 2. Change directory using (cd ~/Image-Captioning-GO)
-## 4. Run 'pip install -r requirements.txt'
-## 5. Go to the 'caption-app' directory and run npm install and npm run start(if this throws error, try installing react-scripts directly:
-## 'npm install react-scripts --save-dev' and 'npm run start'). A react app will run on port 3000 and open in default browser, allow camera access.
-## 6. Go to the project root directory and run 'go run main.go'. A back-end service will run.
-## 7. Staying in the root directory run source venv/bin/activate then again run  'python3 app.py'. A python app for image captioning will run.(run pip install -r requirements.txt to install python dependencies)
-## 8. Your browser now produces caption for images captured using webcam.
+Image Captioning Using ViT Encoder and GPT-2 Decoder
 
-##ARCHITECTURE
+This project implements an end-to-end image captioning system using a Vision Transformer (ViT) as the image encoder and GPT-2 as the text decoder.
 
-<img width="745" height="762" alt="Screenshot From 2025-12-12 21-29-14" src="https://github.com/user-attachments/assets/2fafd9ab-8a60-4b6f-b6ae-5d3c920f421d" />
+The system consists of a React frontend, a Go backend API, and a Python-based machine learning service. Users can capture images using a webcam and receive automatically generated captions in real time.
+
+Project Architecture
+
+Frontend: React application (webcam capture and UI)
+
+Backend API: Go service (request handling and orchestration)
+
+ML Service: Python application (ViT + GPT-2 inference)
+
+Prerequisites
+
+Ensure the following are installed on your system:
+
+Python 3.8+
+
+Go 1.18+
+
+Node.js (LTS recommended)
+
+npm
+
+pip
+
+Virtual environment support (venv)
+
+Installation & Setup
+1. Clone the Repository
+git clone <repository-url>
+cd Image-Captioning-GO
+
+2. Set Up Python Virtual Environment
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+3. Set Up the Frontend (React App)
+cd caption-app
+npm install
+npm run start
+
+
+If react-scripts causes issues:
+
+npm install react-scripts --save-dev
+npm run start
+
+
+The frontend runs at http://localhost:3000
+.
+Allow camera access when prompted.
+
+4. Run the Go Backend API
+cd ..
+go run main.go
+
+5. Run the Python Image Captioning Service
+source venv/bin/activate
+python3 app.py
+
+Run Everything Automatically
+./start.sh
+
+Important Note
+
+Before running ./start.sh:
+
+The Python virtual environment (venv) must exist
+
+Python dependencies must be installed inside the virtual environment
+
+source venv/bin/activate
+pip install -r requirements.txt
+
+
+The script assumes all dependencies are already installed and does not install them automatically.
+
+Usage
+
+Open the React web application.
+
+Allow webcam access.
+
+Capture an image.
+
+View the generated caption.
+
+Notes
+
+All services must run simultaneously.
+
+First inference may take longer due to model initialization.
+
+GPU acceleration improves performance if available.
